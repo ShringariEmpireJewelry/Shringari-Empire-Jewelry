@@ -110,31 +110,57 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <details id="necklaces" open>
+ <details id="necklaces" open>
   <summary>Necklaces</summary>
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 15px;">
-    <div>
+  <style>
+    .necklace-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .necklace-grid img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .necklace-grid img:hover {
+      transform: scale(1.08);
+    }
+    .necklace-item p {
+      text-align: center;
+      margin: 5px 0;
+    }
+    .price {
+      font-weight: bold;
+      color: #a678de;
+    }
+  </style>
+
+  <div class="necklace-grid">
+    <div class="necklace-item">
       <a href="necklace1.html">
-        <img src="https://i.ibb.co/p2Mhnwm/necklace1.jpg" alt="Necklace 1" style="width:100%; border-radius:10px;">
-        <p style="text-align:center; margin:2px 0; font-weight:bold;">RM 250</p>
+        <img src="https://i.ibb.co/p2Mhnwm/necklace1.jpg" alt="Necklace 1">
       </a>
-      <p style="text-align:center; margin:5px 0;">Royal Gold Necklace</p>
+      <p>Royal Gold Necklace</p>
+      <p class="price">RM 250</p>
     </div>
-    <div>
+    <div class="necklace-item">
       <a href="necklace2.html">
-        <img src="https://i.ibb.co/sq0Tr4r/necklace2.jpg" alt="Necklace 2" style="width:100%; border-radius:10px;">
+        <img src="https://i.ibb.co/sq0Tr4r/necklace2.jpg" alt="Necklace 2">
       </a>
-      <p style="text-align:center; margin:5px 0;">Pearl Elegance</p>
+      <p>Pearl Elegance</p>
+      <p class="price">RM 300</p>
     </div>
-    <div>
+    <div class="necklace-item">
       <a href="necklace3.html">
-        <img src="https://i.ibb.co/mTrVQ7H/necklace3.jpg" alt="Necklace 3" style="width:100%; border-radius:10px;">
+        <img src="https://i.ibb.co/mTrVQ7H/necklace3.jpg" alt="Necklace 3">
       </a>
-      <p style="text-align:center; margin:5px 0;">Classic Bridal Set</p>
+      <p>Classic Bridal Set</p>
+      <p class="price">RM 450</p>
     </div>
   </div>
 </details>
-
   <details id="earrings">
     <summary>Earrings</summary>
     <p>Elegant and timeless handcrafted earrings.</p>
