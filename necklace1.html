@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal Gold Necklace - Shringari Empire</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      margin: 20px;
+      background: #fffdf9;
+    }
+    .product {
+      max-width: 500px;
+      margin: auto;
+      text-align: center;
+    }
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    h2 {
+      color: #9b3054;
+    }
+    .order-box {
+      margin-top: 20px;
+    }
+    input {
+      width: 60px;
+      padding: 5px;
+      font-size: 16px;
+      text-align: center;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #25d366;
+      color: white;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="product">
+    <img src="https://i.ibb.co/p2Mhnwm/necklace1.jpg" alt="Royal Gold Necklace">
+    <h2>Royal Gold Necklace</h2>
+    <p>Handcrafted gold necklace with timeless elegance. Perfect for weddings and special occasions.</p>
+    
+    <div class="order-box">
+      <label for="qty">Quantity:</label>
+      <input type="number" id="qty" value="1" min="1">
+      <br>
+      <a id="orderBtn" class="btn" target="_blank">Place Order</a>
+    </div>
+  </div>
+
+  <script>
+    const btn = document.getElementById("orderBtn");
+    const qtyInput = document.getElementById("qty");
+    const phone = "60123456789"; // 🔹 Change to your WhatsApp number
+    const product = "Royal Gold Necklace";
+
+    function updateLink() {
+      const qty = qtyInput.value;
+      btn.href = https://wa.me/${phone}?text=I want to order ${qty} x ${product};
+    }
+
+    qtyInput.addEventListener("input", updateLink);
+    updateLink(); // set initial link
+  </script>
+
+</body>
+</html>
