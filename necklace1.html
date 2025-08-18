@@ -24,12 +24,21 @@
     }
     .order-box {
       margin-top: 20px;
+      padding: 15px;
+      background: #fceae6;
+      border-radius: 10px;
     }
     input {
-      width: 60px;
       padding: 5px;
       font-size: 16px;
       text-align: center;
+      margin: 5px;
+    }
+    .price-box {
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
     }
     .btn {
       display: inline-block;
@@ -51,9 +60,18 @@
     <p>Handcrafted gold necklace with timeless elegance. Perfect for weddings and special occasions.</p>
     
     <div class="order-box">
+      <label>Price per piece: <b>RM 250</b></label><br><br>
+      
       <label for="qty">Quantity:</label>
-      <input type="number" id="qty" value="1" min="1">
-      <br>
+      <input type="number" id="qty" value="1" min="1"><br>
+
+      <label for="discount">Extra Discount (RM):</label>
+      <input type="number" id="discount" value="0" min="0"><br>
+
+      <div class="price-box">
+        Total Price: RM <span id="total">250</span>
+      </div>
+
       <a id="orderBtn" class="btn" target="_blank">Place Order</a>
     </div>
   </div>
@@ -61,16 +79,28 @@
   <script>
     const btn = document.getElementById("orderBtn");
     const qtyInput = document.getElementById("qty");
+    const discountInput = document.getElementById("discount");
+    const totalSpan = document.getElementById("total");
+
     const phone = "919345455797"; // 🔹 Change to your WhatsApp number
     const product = "Royal Gold Necklace";
+    const pricePerPiece = 250; // 🔹 Change price here
 
-    function updateLink() {
-      const qty = qtyInput.value;
-      btn.href = https://wa.me/${phone}?text=I want to order ${qty} x ${product};
+    function updateOrder() {
+      let qty = parseInt(qtyInput.value) || 1;
+      let discount = parseFloat(discountInput.value) || 0;
+
+      let total = (qty * pricePerPiece) - discount;
+      if (total < 0) total = 0;
+
+      totalSpan.textContent = total.toFixed(2);
+
+      btn.href = https://wa.me/${phone}?text=I want to order ${qty} x ${product}. Total after discount: RM ${total.toFixed(2)};
     }
 
-    qtyInput.addEventListener("input", updateLink);
-    updateLink(); // set initial link
+    qtyInput.addEventListener("input", updateOrder);
+    discountInput.addEventListener("input", updateOrder);
+    updateOrder(); // initial load
   </script>
 
 </body>
