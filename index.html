@@ -28,11 +28,6 @@
       font-size: 24px;
       font-weight: bold;
     }
-    header p {
-      margin: 5px 0 0;
-      font-size: 16px;
-      font-style: italic;
-    }
     nav {
       background: #f9d8e7;
       padding: 10px;
@@ -44,17 +39,9 @@
       color: #7c2d48;
       font-weight: bold;
     }
-    details {
-      background: #e9e4fa;
-      margin: 10px;
-      padding: 15px;
-      border-radius: 8px;
-    }
-    summary {
-      font-size: 18px;
-      font-weight: bold;
-      cursor: pointer;
-      color: #9b3054;
+    nav a:hover {
+      color: #a83e61;
+      text-decoration: underline;
     }
     section {
       margin: 15px;
@@ -62,9 +49,48 @@
       border-radius: 8px;
       background: #fff6e9;
     }
-    section h2 {
-      color: #9b3054;
+    h2 {
       text-align: center;
+      color: #7c2d48;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .product {
+      text-align: center;
+      background: #fff;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .price {
+      font-weight: bold;
+      margin-top: 5px;
+      color: #9b3054;
+    }
+    .view-all {
+      display: block;
+      width: 140px;
+      margin: 15px auto;
+      padding: 10px;
+      background: #a34d62;
+      color: white;
+      border-radius: 25px;
+      text-align: center;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .view-all:hover {
+      background: #7c2d48;
+      transform: scale(1.05);
+      transition: 0.3s;
     }
     footer {
       background: #a34d62;
@@ -72,26 +98,6 @@
       text-align: center;
       padding: 15px;
       margin-top: 20px;
-    }
-    .contact {
-      text-align: center;
-      margin-top: 20px;
-    }
-    .contact a {
-      text-decoration: none;
-      color: #9b3054;
-      font-weight: bold;
-    }
-    .whatsapp {
-      display: block;
-      width: 120px;
-      margin: 20px auto;
-      padding: 10px;
-      background: #25d366;
-      color: white;
-      border-radius: 25px;
-      text-align: center;
-      font-weight: bold;
     }
   </style>
 </head>
@@ -106,108 +112,71 @@
     <a href="#necklaces">Necklaces</a>
     <a href="#earrings">Earrings</a>
     <a href="#bangles">Bangles</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+    <a href="#new">New Arrivals</a>
   </nav>
 
- <details id="necklaces" open>
-  <summary>Necklaces</summary>
-  <style>
-    .necklace-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 15px;
-      margin-top: 15px;
-    }
-    .necklace-grid img {
-      width: 75%;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-    }
-    .necklace-grid img:hover {
-      transform: scale(1.08);
-    }
-    .necklace-item p {
-      text-align: center;
-      margin: 5px 0;
-    }
-    .price {
-      font-weight: bold;
-      color: #a678de;
-    }
-  </style>
-
-  <div class="necklace-grid">
-    <div class="necklace-item">
-      <a href="necklace1.html">
-        <img src="https://github.com/ShringariEmpireJewelry/Shringari-Empire-Jewelry/blob/main/necklace1.jpeg" alt="Necklace 1">
-      </a>
-      <p>Royal Gold Necklace</p>
-      <p class="price">RM 250</p>
+  <!-- Necklaces -->
+  <section id="necklaces">
+    <h2>Necklaces</h2>
+    <div class="grid">
+      <div class="product">
+        <img src="https://i.ibb.co/p2Mhnwm/necklace1.jpg" alt="Necklace 1">
+        <p class="price">₹12,999</p>
+      </div>
+      <div class="product">
+        <img src="https://i.ibb.co/4K2m7gR/necklace2.jpg" alt="Necklace 2">
+        <p class="price">₹15,499</p>
+      </div>
     </div>
-    <div class="necklace-item">
-      <a href="necklace1.html">
-        <img src="https://i.ibb.co/sq0Tr4r/necklace2.jpg" alt="Necklace 2">
-      </a>
-      <p>Pearl Elegance</p>
-      <p class="price">RM 300</p>
-    </div>
-    <div class="necklace-item">
-      <a href="necklace1.html">
-        <img src="https://i.ibb.co/mTrVQ7H/necklace3.jpg" alt="Necklace 3">
-      </a>
-      <p>Classic Bridal Set</p>
-      <p class="price">RM 450</p>
-    </div>
-      <div class="necklace-item">
-      <a href="necklace1.html">
-        <img src="https://i.ibb.co/sq0Tr4r/necklace2.jpg" alt="Necklace 4">
-      </a>
-      <p>Pearl Elegance</p>
-      <p class="price">RM 100</p>
-    </div>
-      <div class="necklace-item">
-      <a href="necklace1.html">
-        <img src="https://i.ibb.co/sq0Tr4r/necklace2.jpg" alt="Necklace 5">
-      </a>
-      <p>Pearl Elegance</p>
-      <p class="price">RM 300</p>
-    </div>
-      <div class="necklace-item">
-      <a href="necklace1.html">
-        <img src="https://i.ibb.co/sq0Tr4r/necklace2.jpg" alt="Necklace 6">
-      </a>
-      <p>Pearl Elegance</p>
-      <p class="price">RM 300</p>
-    </div>
-      <div class="necklace-item">
-      <a href="necklace1.html">
-        <img src="https://i.ibb.co/sq0Tr4r/necklace2.jpg" alt="Necklace 7">
-      </a>
-      <p>Pearl Elegance</p>
-      <p class="price">RM 300</p>
-    </div>
-  </div>
-</details>
-  <details id="earrings">
-    <summary>Earrings</summary>
-    <p>Elegant and timeless handcrafted earrings.</p>
-  </details>
-
-  <details id="bangles">
-    <summary>Bangles</summary>
-    <p>Discover traditional and modern bangles.</p>
-  </details>
-
-  <section id="about">
-    <h2>About Us</h2>
-    <p>We specialize in handcrafted jewelry that blends tradition with modern elegance. Every piece is created with passion and precision for timeless beauty.</p>
+    <a href="necklaces.html" class="view-all">View All</a>
   </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p class="contact">📧 DM us on <a href="https://instagram.com/shringari_empire">@shringari_empire</a> or reach us via WhatsApp below.</p>
-    <a class="whatsapp" href="https://wa.me/60123456789" target="_blank">WhatsApp</a>
+  <!-- Earrings -->
+  <section id="earrings">
+    <h2>Earrings</h2>
+    <div class="grid">
+      <div class="product">
+        <img src="https://i.ibb.co/6PpNxnw/earring1.jpg" alt="Earring 1">
+        <p class="price">₹2,499</p>
+      </div>
+      <div class="product">
+        <img src="https://i.ibb.co/fXK4g9p/earring2.jpg" alt="Earring 2">
+        <p class="price">₹3,199</p>
+      </div>
+    </div>
+    <a href="earrings.html" class="view-all">View All</a>
+  </section>
+
+  <!-- Bangles -->
+  <section id="bangles">
+    <h2>Bangles</h2>
+    <div class="grid">
+      <div class="product">
+        <img src="https://i.ibb.co/2j2kY0z/bangle1.jpg" alt="Bangle 1">
+        <p class="price">₹6,999</p>
+      </div>
+      <div class="product">
+        <img src="https://i.ibb.co/4Njp7jM/bangle2.jpg" alt="Bangle 2">
+        <p class="price">₹7,499</p>
+      </div>
+    </div>
+    <a href="bangles.html" class="view-all">View All</a>
+  </section>
+
+  <!-- New Arrivals -->
+  <section id="new">
+    <h2>New Arrivals</h2>
+    <div class="grid">
+      <div class="product">
+        <img src="https://i.ibb.co/v39G6Zy/new1.jpg" alt="New Arrival 1">
+        <p class="price">₹8,999</p>
+      </div>
+      <div class="product">
+        <img src="https://i.ibb.co/DR9pmpK/new2.jpg" alt="New Arrival 2">
+        <p class="price">₹11,499</p>
+      </div>
+    </div>
+    <a href="newarrivals.html" class="view-all">View All</a>
   </section>
 
   <footer>
