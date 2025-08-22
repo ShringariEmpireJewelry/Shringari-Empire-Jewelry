@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Page</title>
+  <style>
+    body {
+      text-align: center;
+      margin: 30px;
+      font-family: Arial, sans-serif;
+      background-color: #D6d9c5;
+    }
+    .product {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      background: white;
+    }
+    .product img {
+      width: 200px;
+      border-radius: 10px;
+    }
+    .order-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #27ae60;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .order-btn:hover {
+      background-color: #1e8449;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Your Order</h2>
+
+  <div class="product">
+    <img id="product-img" src="" alt="Product">
+    <h3 id="product-name"></h3>
+    <p><b>Price:</b> $<span id="product-price"></span></p>
+  </div>
+
+  <!-- Place Order Button -->
+  <br>
+  <a id="place-order" class="order-btn">Place Order on WhatsApp</a>
+
+  <script>
+    // Get product info from URL
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
+    const price = params.get("price");
+    const img = params.get("img");
+
+    // Fill product details
+    document.getElementById("product-name").innerText = name;
+    document.getElementById("product-price").innerText = price;
+    document.getElementById("product-img").src = img;
+
+    // WhatsApp link
+    const phoneNumber = "919345455797"; // <-- replace with your WhatsApp number
+    const message = `Hello, I want to order: ${name} for $${price}`;
+    document.getElementById("place-order").href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  </script>
+
+</body>
+</html>

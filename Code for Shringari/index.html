@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shringari Empire Jewelry</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      margin: 0;
+      background: #fffdf9;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background: lavender;
+    }
+
+    header img {
+      max-width: 120px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+      background: #f5f5f5;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #444;
+    }
+
+    section {
+      padding: 30px;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ccc;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .product {
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius:5px;
+      padding: 10px;
+      background: white;
+      transition: transform 0.2s;
+    }
+
+    .product img {
+      width: 50%;
+      height: 100%;       /* fixed height for all images */
+      object-fit: cover;   /* crop and fit neatly */
+      border-radius: 1px;
+      transition: transform 0.3s;
+    }
+
+    .product img:hover {
+      transform: scale(1.08);
+    }
+
+    .price {
+      font-weight: bold;
+      margin: 10px 0;
+      color: #b12704;
+    }
+
+    button {
+      padding: 8px 15px;
+      border: none;
+      border-radius: 6px;
+      background: #800080;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #a020f0;
+    }
+
+    .view-all {
+      display: block;
+      margin-top: 15px;
+      text-align: right;
+      color: #0066cc;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: lavender;
+      margin-top: 30px;
+    }
+  </style>
+  <script>
+    function orderNow(product, price) {
+      window.location.href = `order.html?product=${encodeURIComponent(product)}&price=${encodeURIComponent(price)}`;
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <img src="https://i.ibb.co/ZHppT3c/logo.png" alt="Shringari Logo">
+    <h1>SHRINGARI EMPIRE JEWELRY</h1>
+    <p>Timeless Beauty. Handcrafted Elegance.</p>
+  </header>
+
+  <nav>
+    <a href="#necklaces">Necklaces</a>
+    <a href="#earrings">Earrings</a>
+    <a href="#bangles">Bangles</a>
+    <a href="#new">New Arrivals</a>
+  </nav>
+
+  <!-- Necklaces -->
+  <section id="necklaces">
+    <h2>Necklaces</h2>
+    <div class="grid">
+      <div class="product">
+        <img src="Images/nacklace/necklace1.jpeg" alt="Necklace 1">
+        <p class="price">RM 150</p>
+        <button onclick="orderNow('Necklace 1','12999')">Order Now</button>
+      </div>
+      <div class="product">
+        <img src="Images/nacklace/necklace3.jpeg"Necklace 2">
+        <p class="price">RM 100</p>
+        <button onclick="orderNow('Necklace 2','15499')">Order Now</button>
+      </div>
+    </div>
+    <a href="necklaces.html" class="view-all">View All</a>
+  </section>
+
+  <!-- Earrings -->
+  <section id="earrings">
+    <h2>Earrings</h2>
+    <div class="grid">
+      <div class="product">
+        <img src="https://i.ibb.co/6PpNxnw/earring1.jpg" alt="Earring 1">
+        <p class="price">₹2,499</p>
+        <button onclick="orderNow('Earring 1','2499')">Order Now</button>
+      </div>
+      <div class="product">
+        <img src="https://i.ibb.co/fXK4g9p/earring2.jpg" alt="Earring 2">
+        <p class="price">₹3,199</p>
+        <button onclick="orderNow('Earring 2','3199')">Order Now</button>
+      </div>
+    </div>
+    <a href="earrings.html" class="view-all">View All</a>
+  </section>
+
+  <!-- Bangles -->
+  <section id="bangles">
+    <h2>Bangles</h2>
+    <div class="grid">
+      <div class="product">
+        <img src="https://i.ibb.co/2j2kY0z/bangle1.jpg" alt="Bangle 1">
+        <p class="price">RM 150</p>
+        <button onclick="orderNow('Bangle 1','6999')">Order Now</button>
+      </div>
+      <div class="product">
+        <img src="https://i.ibb.co/4Njp7jM/bangle2.jpg" alt="Bangle 2">
+        <p class="price">RM 100</p>
+        <button onclick="orderNow('Bangle 2','7499')">Order Now</button>
+      </div>
+    </div>
+    <a href="bangles.html" class="view-all">View All</a>
+  </section>
+
+  <!-- New Arrivals -->
+  <section id="new">
+    <h2>New Arrivals</h2>
+    <div class="grid">
+      <div class="product">
+        <img src="https://i.ibb.co/v39G6Zy/new1.jpg" alt="New Arrival 1">
+        <p class="price">RM 250</p>
+        <button onclick="orderNow('New Arrival 1','8999')">Order Now</button>
+      </div>
+      <div class="product">
+        <img src="https://i.ibb.co/DR9pmpK/new2.jpg" alt="New Arrival 2">
+        <p class="price">₹11,499</p>
+        <button onclick="orderNow('New Arrival 2','11499')">Order Now</button>
+      </div>
+    </div>
+    <a href="newarrivals.html" class="view-all">View All</a>
+  </section>
+
+  <footer>
+    © 2025 SHRINGARI EMPIRE JEWELRY. All rights reserved.
+  </footer>
+</body>
+</html>

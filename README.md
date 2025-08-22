@@ -1,1 +1,0 @@
-# Shringari-Empire-Jewelry
