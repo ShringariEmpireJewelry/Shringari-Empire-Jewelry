@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>SHRINGARI EMPIRE JEWELERY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shringari Empire Jewelry - Elegant handcrafted necklaces, bangles, earrings, bridal sets, and more. Handcrafted with tradition and modern elegance.">
+  <meta name="keywords" content="Shringari Jewelry, Necklaces, Bangles, Earrings, Bridal Jewelry, Matte Jewelry, Combo Jewelry, Handcrafted Jewelry">
+  <meta name="author" content="Shringari Empire">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -84,7 +89,7 @@
     }
     .product img {
       width: 100%;
-      height: auto;
+      height: 70%;
       border-radius: 10px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -97,6 +102,19 @@
       font-size: 1rem;
       font-weight: bold;
       color: #a030a0;
+    }
+    .stock-info {
+      margin-top: 6px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .stock-info .in-stock {
+      color: #2d9c2d;
+      font-weight: bold;
+    }
+    .stock-info .sold {
+      color: #c153c1;
+      font-weight: bold;
     }
     .product-buttons {
       margin-top: 10px;
@@ -130,11 +148,12 @@
       font-weight: bold;
       border-radius: 5px;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: background 0.3s ease, transform 0.3s ease;
     }
     .view-btn:hover {
-      background-color: #d3a6d3;
+      background-color: #a030a0;
       color: white;
+      transform: scale(1.05);
     }
 
     /* Testimonials */
@@ -173,28 +192,6 @@
     footer a:hover {
       text-decoration: underline;
     }
-
-    /* WhatsApp Floating Button */
-    .whatsapp-float {
-      position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      color: white;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 30px;
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-      z-index: 100;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: transform 0.3s;
-    }
-    .whatsapp-float:hover {
-      transform: scale(1.1);
     }
   </style>
 </head>
@@ -211,7 +208,7 @@
     <a href="#bridals"><i class="fa-solid fa-crown"></i> Bridals</a>
     <a href="#matte"><i class="fa-solid fa-circle-half-stroke"></i> Matte</a>
     <a href="#combo"><i class="fa-solid fa-gift"></i> Combo</a>
-    <a href="#earrings"><i class="fa-solid fa-ear-listen"></i> Earrings</a>
+    <a href="#earrings"><i class="fa-solid fa-ear"></i> Earrings</a>
   </nav>
 
   <!-- Categories -->
@@ -219,127 +216,141 @@
     <h2><i class="fa-solid fa-gem"></i> Necklaces</h2>
     <div class="products">
       <div class="product">
-        <img src="https://i.ibb.co/p2Mhnwm/necklace1.jpg" alt="Necklace 1">
-        <div class="price">RM 1500</div>
+        <img src="Images/NECKLACE/N1.jpeg" alt="Necklace 1">
+        <div class="price">RM&nbsp;150</div>
+        <div class="stock-info">Stock: <span class="in-stock">12</span> | Sold: <span class="sold">8</span></div>
         <div class="product-buttons">
-          <a href="orderpage.html?product=Necklace1&price=1500"><button class="order-btn">Order</button></a>
+          <a href="order page.html?product=Necklace1&price=1500"><button class="order-btn">Order</button></a>
         </div>
       </div>
       <div class="product">
-        <img src="https://i.ibb.co/ZV7P5qk/necklace2.jpg" alt="Necklace 2">
-        <div class="price">RM 1600</div>
+        <img src="Images/NECKLACE/N2.jpeg" alt="Necklace 2">
+        <div class="price">RM&nbsp;100</div>
+        <div class="stock-info">Stock: <span class="in-stock">10</span> | Sold: <span class="sold">5</span></div>
         <div class="product-buttons">
-          <a href="orderpage.html?product=Necklace2&price=1600"><button class="order-btn">Order</button></a>
+          <a href="order page.html?product=Necklace2&price=1600"><button class="order-btn">Order</button></a>
         </div>
       </div>
     </div>
     <button class="view-btn">View All Products</button>
   </div>
 
+ <div class="category" id="necklace">
+    <h2><i class="fa-solid fa-gem"></i>Bridals</h2>
+    <div class="products">
+      <div class="product">
+        <img src="Images/BRIDALS/bridals.jpeg" alt="Necklace 1">
+        <div class="price">RM&nbsp;200</div>
+        <div class="stock-info">Stock: <span class="in-stock">12</span> | Sold: <span class="sold">8</span></div>
+        <div class="product-buttons">
+          <a href="order page.html?product=Necklace1&price=1500"><button class="order-btn">Order</button></a>
+        </div>
+      </div>
+      <div class="product">
+        <img src="Images/BRIDALS/bridals1.jpg" alt="Necklace 2">
+        <div class="price">RM&nbsp;300</div>
+        <div class="stock-info">Stock: <span class="in-stock">10</span> | Sold: <span class="sold">5</span></div>
+        <div class="product-buttons">
+          <a href="order page.html?product=Necklace2&price=1600"><button class="order-btn">Order</button></a>
+        </div>
+      </div>
+    </div>
+    <button class="view-btn">View All Products</button>
+  </div>
+  <!-- Repeat same pattern for Bangles, Bridals, Matte, Combo, Earrings -->
+  <!-- Example for Bangles -->
   <div class="category" id="bangles">
     <h2><i class="fa-solid fa-ring"></i> Bangles</h2>
     <div class="products">
       <div class="product">
-        <img src="https://i.ibb.co/MCJYqTj/bangles1.jpg" alt="Bangle 1">
-        <div class="price">RM 800</div>
+        <img src="Images/BANGLES/B1.jpeg" alt="Bangle 1">
+        <div class="price">RM&nbsp;50</div>
+        <div class="stock-info">Stock: <span class="in-stock">15</span> | Sold: <span class="sold">6</span></div>
         <div class="product-buttons">
-          <a href="orderpage.html?product=Bangle1&price=800"><button class="order-btn">Order</button></a>
+          <a href="order page.html?product=Bangle1&price=800"><button class="order-btn">Order</button></a>
         </div>
       </div>
       <div class="product">
-        <img src="https://i.ibb.co/zsG9XjM/bangles2.jpg" alt="Bangle 2">
-        <div class="price">RM 950</div>
+        <img src="Images/BANGLES/B2.jpeg" alt="Bangle 2">
+        <div class="price">RM&nbsp;50</div>
+        <div class="stock-info">Stock: <span class="in-stock">9</span> | Sold: <span class="sold">12</span></div>
         <div class="product-buttons">
-          <a href="orderpage.html?product=Bangle2&price=950"><button class="order-btn">Order</button></a>
+          <a href="order page.html?product=Bangle2&price=950"><button class="order-btn">Order</button></a>
+        </div>
+      </div>
+    </div>
+    <button class="view-btn">View All Products</button>
+ </div>
+
+   <div class="category" id="necklace">
+    <h2><i class="fa-solid fa-gem"></i> Matte </h2>
+    <div class="products">
+      <div class="product">
+        <img src="Images/MATE/M1.jpeg" alt="Necklace 1">
+        <div class="price">RM&nbsp;250</div>
+        <div class="stock-info">Stock: <span class="in-stock">12</span> | Sold: <span class="sold">8</span></div>
+        <div class="product-buttons">
+          <a href="order page.html?product=Necklace1&price=1500"><button class="order-btn">Order</button></a>
+        </div>
+      </div>
+      <div class="product">
+        <img src="Images/MATE/M2.jpeg"Necklace 2">
+        <div class="price">RM&nbsp;150</div>
+        <div class="stock-info">Stock: <span class="in-stock">10</span> | Sold: <span class="sold">5</span></div>
+        <div class="product-buttons">
+          <a href="order page.html?product=Necklace2&price=1600"><button class="order-btn">Order</button></a>
         </div>
       </div>
     </div>
     <button class="view-btn">View All Products</button>
   </div>
 
-  <div class="category" id="bridals">
-    <h2><i class="fa-solid fa-crown"></i> Bridals</h2>
+ <div class="category" id="earrings">
+    <h2><i class="fa-solid fa-gem"></i> Earings</h2>
     <div class="products">
       <div class="product">
-        <img src="https://i.ibb.co/5rLzZKc/bridal1.jpg" alt="Bridal 1">
-        <div class="price">RM 2500</div>
+        <img src="E1.jpeg" alt="Earrings 1">
+        <div class="price">RM&nbsp;1500</div>
+        <div class="stock-info">Stock: <span class="in-stock">12</span> | Sold: <span class="sold">8</span></div>
         <div class="product-buttons">
-          <a href="orderpage.html?product=Bridal1&price=2500"><button class="order-btn">Order</button></a>
+          <a href="order page.html?product=Necklace1&price=1500"><button class="order-btn">Order</button></a>
         </div>
       </div>
       <div class="product">
-        <img src="https://i.ibb.co/LN4mttv/bridal2.jpg" alt="Bridal 2">
-        <div class="price">RM 2800</div>
+        <img src="E2.jpeg" alt="Earrings 2">
+        <div class="price">RM&nbsp;1600</div>
+        <div class="stock-info">Stock: <span class="in-stock">10</span> | Sold: <span class="sold">5</span></div>
         <div class="product-buttons">
-          <a href="orderpage.html?product=Bridal2&price=2800"><button class="order-btn">Order</button></a>
+          <a href="order page.html?product=Necklace2&price=1600"><button class="order-btn">Order</button></a>
         </div>
       </div>
     </div>
     <button class="view-btn">View All Products</button>
   </div>
 
-  <div class="category" id="matte">
-    <h2><i class="fa-solid fa-circle-half-stroke"></i> Matte</h2>
+   <div class="category" id="combo">
+    <h2><i class="fa-solid fa-gem"></i> Combo</h2>
     <div class="products">
       <div class="product">
-        <img src="https://i.ibb.co/Nm3mYJh/matte1.jpg" alt="Matte 1">
-        <div class="price">RM 1200</div>
+        <img src="Images/COMBO/C1.jpeg" alt="Necklace 1">
+        <div class="price">RM&nbsp;350</div>
+        <div class="stock-info">Stock: <span class="in-stock">12</span> | Sold: <span class="sold">8</span></div>
         <div class="product-buttons">
-          <a href="orderpage.html?product=Matte1&price=1200"><button class="order-btn">Order</button></a>
+          <a href="order page.html?product=Necklace1&price=1500"><button class="order-btn">Order</button></a>
         </div>
       </div>
       <div class="product">
-        <img src="https://i.ibb.co/GtTnL2R/matte2.jpg" alt="Matte 2">
-        <div class="price">RM 1350</div>
+        <img src="Images/COMBO/C2.jpeg" alt="Necklace 2">
+        <div class="price">RM&nbsp;300</div>
+        <div class="stock-info">Stock: <span class="in-stock">10</span> | Sold: <span class="sold">5</span></div>
         <div class="product-buttons">
-          <a href="orderpage.html?product=Matte2&price=1350"><button class="order-btn">Order</button></a>
+          <a href="order page.html?product=Necklace2&price=1600"><button class="order-btn">Order</button></a>
         </div>
       </div>
     </div>
     <button class="view-btn">View All Products</button>
   </div>
-
-  <div class="category" id="combo">
-    <h2><i class="fa-solid fa-gift"></i> Combo</h2>
-    <div class="products">
-      <div class="product">
-        <img src="https://i.ibb.co/MR3yPrJ/combo1.jpg" alt="Combo 1">
-        <div class="price">RM 1800</div>
-        <div class="product-buttons">
-          <a href="orderpage.html?product=Combo1&price=1800"><button class="order-btn">Order</button></a>
-        </div>
-      </div>
-      <div class="product">
-        <img src="https://i.ibb.co/Jvhsjh1/combo2.jpg" alt="Combo 2">
-        <div class="price">RM 2100</div>
-        <div class="product-buttons">
-          <a href="orderpage.html?product=Combo2&price=2100"><button class="order-btn">Order</button></a>
-        </div>
-      </div>
-    </div>
-    <button class="view-btn">View All Products</button>
-  </div>
-
-  <div class="category" id="earrings">
-    <h2><i class="fa-solid fa-ear-listen"></i> Earrings</h2>
-    <div class="products">
-      <div class="product">
-        <img src="https://i.ibb.co/vYwM1mT/earring1.jpg" alt="Earring 1">
-        <div class="price">RM 600</div>
-        <div class="product-buttons">
-          <a href="orderpage.html?product=Earring1&price=600"><button class="order-btn">Order</button></a>
-        </div>
-      </div>
-      <div class="product">
-        <img src="https://i.ibb.co/D7TmztB/earring2.jpg" alt="Earring 2">
-        <div class="price">RM 750</div>
-        <div class="product-buttons">
-          <a href="orderpage.html?product=Earring2&price=750"><button class="order-btn">Order</button></a>
-        </div>
-      </div>
-    </div>
-    <button class="view-btn">View All Products</button>
-  </div>
+  <!-- Add same stock/sold structure for Bridals, Matte, Combo, Earrings -->
 
   <!-- Testimonials -->
   <div class="testimonials">
@@ -347,15 +358,15 @@
     <div class="testimonial-cards">
       <div class="testimonial">
         <p>"Absolutely stunning necklace! I got so many compliments. Worth every RM!"</p>
-        <h4>- Kanmani S.</h4>
+        <h4>- Priya K.</h4>
       </div>
       <div class="testimonial">
         <p>"Fast delivery and top quality bangles. I will order again!"</p>
-        <h4>- Malar P.</h4>
+        <h4>- Aishah M.</h4>
       </div>
       <div class="testimonial">
         <p>"Bridal set was gorgeous and exactly like the picture!"</p>
-        <h4>- Thara S.</h4>
+        <h4>- Kavitha S.</h4>
       </div>
     </div>
   </div>
